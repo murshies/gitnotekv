@@ -29,12 +29,11 @@ with gitnotekv.Repo('repo_path_here') as repo:
     print(ref['key1']['hello']) # Prints "world"
 ```
 
-Note that note values are only updated when assigning back to the top level references:
+The key-value store under each repository reference acts like a dictionary, so you can do things like this:
 ```python
 with gitnotekv.Repo('repo_path_here') as repo:
     ref = repo['reference']
     ref['key1'] = {'hello': 'world'}
     value = ref['key1']
-    value['hello'] = 'world 2' # This does NOT update ref['key1']
-    ref['key1'] = value # ref['key1'] is updated
+    value['hello'] = 'world 2' # This updates ref['key1']
 ```
