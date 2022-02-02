@@ -211,7 +211,7 @@ class RepoRef:
         """
         return key in self.note_kv
 
-    def __delete__(self, key: str):
+    def __delitem__(self, key: str):
         """
         Delete a key-value pair.
 
