@@ -7,7 +7,6 @@ example, a branch, tag, or commit hash) acts as a separate key-value store, to
 which any number of key-value pairs can be written.
 """
 import json
-import logging
 import sh
 
 
